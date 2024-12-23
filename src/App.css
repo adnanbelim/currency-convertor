@@ -1,20 +1,20 @@
-body{
+body {
   background-color: #383737;
 }
-.image-bg{
+.image-bg {
   height: 100vh;
   background-color: rgb(89, 90, 90);
-  background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSWxyCoTrkr2DaY6ncg1YGQGfeKa5VCctBlQZ-gw2zQORSREgUTmc1q7NzGQXELU5iJyOU&usqp=CAU');
-  background-position:top center;
+  background-image: url("https://img.freepik.com/free-vector/digital-rupee-concept-technology-background_1017-36657.jpg?ga=GA1.1.1634124954.1721139244&semt=ais_hybrid");
+  background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  filter: blur(12px);
+  filter: blur(8px);
 }
-.container{
+.container {
   position: absolute;
   left: 50%;
   top: 50%;
-  transform: translate(-50% , -50%);
+  transform: translate(-50%, -50%);
   width: 40%;
   height: 40%;
   background-color: rgba(114, 120, 120, 0.44);
@@ -24,54 +24,131 @@ body{
   flex-direction: column;
   justify-content: center;
 }
-.container .input-Container{
+.container .input-Container {
   height: 70%;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-} 
+}
 
-.swap-currency{
-  width: 90px;
-  height: 40px;
-  background-color:  rgb(255, 3, 3);
+.swap-currency {
+  width: 80px;
+  height: 35px;
+  background-color: rgb(255, 3, 3);
   border: none;
   outline: none;
   color: white;
   font-size: 20px;
+  font-family: Georgia, "Times New Roman", Times, serif;
   font-weight: bold;
   border-radius: 10px;
   position: absolute;
-  top: 42%;
-  left: 50%;
+  top: 40%;
+  left: 46%;
   transform: translate(-50%, -50%);
 }
-.swap-currency:hover{
-  background-color:  rgb(226, 19, 19);
+.swap-currency:hover {
+  background-color: rgb(226, 19, 19);
 }
 
-.swap-currency:active{
+.swap-currency:active {
   width: 85px;
   height: 35px;
   font-size: 18px;
 }
 
-.container .convert-btn{
- height: 60px;
- position: relative;
- bottom: -10px; 
- background-color: rgb(14, 107, 220);
- border: none; 
- outline: none;
- font-size: 25px;
- color: white;
- font-weight: bold;
- margin: 5px 0;
+.container .convert-btn {
+  height: 42px;
+  position: relative;
+  bottom: -10px;
+  background-color: rgb(14, 107, 220);
+  border: none;
+  outline: none;
+  font-size: 22px;
+  font-family: monospace;
+  color: white;
+  font-weight: bold;
+  margin: 5px 0;
+  border-radius: 10px;
 }
-.container .convert-btn:hover{
- background-color: rgb(0, 115, 255);
+.container .convert-btn:hover {
+  background-color: rgb(0, 115, 255);
 }
-.container .convert-btn:active{
+.container .convert-btn:active {
   transform: scale(0.9);
 }
 
+@media (max-width: 793px) {
+  .swap-currency {
+    display: none;
+  }
+  .currency-type .currency {
+    white-space: nowrap;
+    font-size: 17px !important;
+  }
+  .currency-type .type {
+    height: 25px !important;
+    margin-bottom: 8%;
+    font-size: 15px !important;
+    padding: 2px 3px !important;
+    width: 50% !important;
+  }
+  .from-amt .from {
+    font-size: 15px !important;
+  }
+  .from-amt .amt {
+    font-size: 15px !important;
+    margin-bottom: 8%;
+  }
+  .container .convert-btn {
+    font-size: 16px;
+  }
+}
+
+@media (max-width:520px)
+{
+  .currency-type .type
+  {
+    width: 70% !important;
+  }
+  .currency-type .currency
+  {
+    font-size: 13px !important;
+  }
+  .from-amt .from
+  {
+    font-size: 13px !important;
+  }
+  .from-amt .amt
+  {
+    font-size: 13px !important;
+    margin-bottom: 34% !important;
+  }
+}
+
+@media (max-width:420px)
+{
+  .currency-type .currency
+  {
+    font-size: 10px !important;
+  }
+  .currency-type .type
+  {
+    width: 87% !important;
+    padding: 0 !important;
+  }
+  .from-amt .from
+  {
+    font-size: 10px !important;
+
+  }
+  .from-amt .amt
+  {
+    font-size: 13px !important;
+    /* margin-bottom: 34% !important; */
+  }
+  .container .convert-btn
+  {
+    font-size: 12px !important;
+  }
+}

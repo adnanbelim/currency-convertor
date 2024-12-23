@@ -37,7 +37,7 @@ function App() {
           <button className="swap-currency" onClick={swapCurrency}>Swap</button>
           <InputBox amount={convertedAmount} label={'To'} amountDisable={true} selectCurrency={to} currencyOption={options} onCurrencyChange={(e)=>setTo(e)} convertCurrency={convertCurrency}/>
         </div>
-        <button className='convert-btn' onClick={(e)=>convertCurrency(to)}>Convert {from} TO {to}</button>
+        <button className='convert-btn' onClick={(e)=>convertCurrency(to)}>Convert {from} to {to}</button>
       </div>
     </>
   )
